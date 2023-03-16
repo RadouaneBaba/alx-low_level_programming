@@ -2,8 +2,9 @@
 
 
 /**
- *main - Entry point
- *printf task
+ * main - Entry point
+ * Description: 'printf task'
+ * Return Always 0 (Success)
  */
 
 int main(void)
