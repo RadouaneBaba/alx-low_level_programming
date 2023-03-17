@@ -1,7 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
-
+/**
+ * main - Entry mode
+ * Return: Always (0) Success
+ */
 /* betty style doc for function main goes there */
 int main(void)
 {
@@ -15,6 +18,6 @@ int main(void)
 	else if (n == 0)
 		printf("%i is zero\n");
 	else
-		printf("%i is negative\n);
+		printf("%i is negative\n");
 	return (0);
 }
