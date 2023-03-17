@@ -21,7 +21,7 @@ int main(void)
 			while (k < 10)
 			{
 				if (j == 0)
-					l = 1;
+					l = 0;
 				else
 					l = j + 1;
 				while (l < 10)
