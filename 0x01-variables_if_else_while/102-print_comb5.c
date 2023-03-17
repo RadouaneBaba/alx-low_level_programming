@@ -20,7 +20,7 @@ int main(void)
 			k = i;
 			while (k < 10)
 			{
-				if (j == 0)
+				if (j == 0 && i == 0)
 					l = 0;
 				else
 					l = j + 1;
