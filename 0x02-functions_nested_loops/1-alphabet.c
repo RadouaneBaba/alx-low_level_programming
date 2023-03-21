@@ -1,4 +1,9 @@
-#includ "main.h"
+#include "main.h"
+
+/**
+ * print_alphabet - print chars
+ *
+ */
 
 void print_alphabet(void)
 {
