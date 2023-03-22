@@ -22,13 +22,13 @@ void print_to_98(int n)
 				_putchar(a + '0');
 				if (a == 8 && b == 9)
 				{
-					putchar(',');
-					putchar(' ');
+					_putchar(',');
+					_putchar(' ');
 				}
 				a++;
 			}
 			b++;
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
