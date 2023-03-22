@@ -7,19 +7,22 @@
 void jack_bauer(void)
 {
 	int a = 0;
-	int b = 0;
-	int c = 0;
-	int d = 0;
+	int b;
+	int c;
+	int d;
 	int k = 10;
 
 	while (a < 3)
 	{
 		if (a == 2)
 			k = 4;
+		b = 0;
 		while (b < k)
 		{
+			c = 0;
 			while (c < 6)
 			{
+				d = 0;
 				while (d < 10)
 				{
 					_putchar(a + '0');
