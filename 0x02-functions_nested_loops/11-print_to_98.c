@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * print_to_98 - print nums
@@ -9,28 +9,19 @@
 
 void print_to_98(int n)
 {
-	int a = n % 10;
-	int b = n - a;
+	int a = n;
 
-	if (n <= 98)
+	while (a != 98)
 	{
-		while (b < 10)
+		printf("%i, ", a);
+		if (a > 98)
 		{
-			while (a < 9)
-			{
-				_putchar(b + '0');
-				_putchar(a + '0');
-				if (a == 8 && b == 9)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
-				a++;
-			}
-			b++;
+			a--;
 		}
-		_putchar('\n');
+		else
+		{
+			a++;
+		}
 	}
-	else if (n >= 98)
-	
+	printf("%i", 98);
 }
