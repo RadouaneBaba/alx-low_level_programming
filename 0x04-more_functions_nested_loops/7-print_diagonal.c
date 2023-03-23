@@ -1,8 +1,8 @@
 #include "main.h"
+
 /**
- * print_diagonal - literally diagonal
- *
- * @n: diagonal length
+ * print_diagonal - literally diagonnal
+ * @n: number
  */
 
 void print_diagonal(int n)
@@ -10,7 +10,7 @@ void print_diagonal(int n)
 	int i = 0;
 	int j;
 
-	if (size <= 0)
+	if (n <= 0)
 		_putchar('\n');
 	else
 	{
