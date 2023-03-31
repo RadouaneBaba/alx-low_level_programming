@@ -15,6 +15,7 @@ char *leet(char *s)
 	{
 		if (s[i] == code[i] || s[i] == codem[i])
 			s[i] = encode[i];
+		i++;
 	}
 	return (s);
 }
