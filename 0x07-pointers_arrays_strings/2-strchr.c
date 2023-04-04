@@ -1,9 +1,10 @@
 #include "main.h"
+
 /**
  * _strchr - locates a charcter in a string
  * @s: string
  * @c: charcter
- * Return: pointer to a character
+ * Return: return s or NULL
  */
 
 char *_strchr(char *s, char c)
@@ -14,7 +15,7 @@ char *_strchr(char *s, char c)
 		s++;
 	}
 	if (*s == c)
-		return (*s);
+		return (s);
 	else
 		return (NULL);
 }
