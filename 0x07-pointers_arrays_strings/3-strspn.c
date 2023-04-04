@@ -11,7 +11,7 @@ unsigned int _strspn(char *s, char *accept)
 {
 	int i = 0;
 	int j;
-	unsigned int s = 0;
+	unsigned int sum = 0;
 
 	while (s[i] != '\0')
 	{
@@ -20,10 +20,10 @@ unsigned int _strspn(char *s, char *accept)
 		while (accept[j] != '\0')
 		{
 			if (s[i] == accept[j])
-				s++;
+				sum++;
 			j++;
 		}
 		i++;
 	}
-	return (s);
+	return (sum);
 }
