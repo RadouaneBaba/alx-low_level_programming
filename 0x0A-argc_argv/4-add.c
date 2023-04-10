@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - entry point
@@ -28,7 +29,7 @@ int main(int argc, char *argv[])
 			}
 			i++;
 		}
-		sum += (int) *argv;
+		sum += atoi(*argv);
 		*argv++;
 	}
 
