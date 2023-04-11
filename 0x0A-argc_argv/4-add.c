@@ -10,22 +10,22 @@
 
 int main(int argc, char *argv[])
 {
+	int i = 1;
+	int sum = 0;
+	int j = 0;
+
 	if (argc < 2)
 	{
 		printf("0\n");
 		return (0);
 	}
 
-	int sum = 0;
-	int i = 1;
-	int j = 0;
-
 	while (i < argc)
 	{
 		j = 0;
 		while (argv[i][j] != '\0')
 		{
-			if (argv[i][j] < 48 && argv[i][j] > 57)
+			if (argv[i][j] < 48 || argv[i][j] > 57)
 			{
 				printf("Error\n");
 				return (1);
