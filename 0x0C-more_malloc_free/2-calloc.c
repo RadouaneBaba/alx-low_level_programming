@@ -17,6 +17,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (arr == NULL)
 		return (NULL);
-	memset(arr, 0, nmemb * size);
+	while (i < nmemb * size)
+	{
+		p[i] = 0;
+		i++;
+	}
 	return (arr);
 }
