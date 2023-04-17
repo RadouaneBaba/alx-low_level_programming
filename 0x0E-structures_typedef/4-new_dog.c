@@ -2,18 +2,31 @@
 #include <stdlib.h>
 
 /**
- * _strlen - string length
+ * _strdup - string copy
  * @s: string
- * Return: int
+ * Return: copy
  */
 
-int _strlen(char *s)
+char *_strdup(char *s)
 {
 	int i = 0;
+	int size = 0;
+	char *str;
 
-	while (s[i] != '\0')
+	if (s == NULL)
+		return (NULL);
+	while (s[size] != '\0')
+		size++;
+	str = malloc(sizeof(char) * (size + 1));
+	if (str == NULL)
+		return (NULL);
+	while (i < size)
+	{
+		str[i] = s[i];
 		i++;
-	return (i);
+	}
+	str[size] = '\0';
+	return (str);
 }
 
 /**
@@ -31,13 +44,19 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (d == NULL)
 		return (NULL);
 
-	d->name = malloc(strlen(name));
-	if (d->name)
-		d->name = name;
-	d->owner = malloc(strlen(owner));
-	if (d->owner)
-		d->owner = owner;
-
+	d->name = _strdup(name);
+	if (d->name == NULL)
+	{
+		free(d);
+		return (NULL);
+	}
+	d->owner = _strdup(owner);
+	if (d->owner == NULL)
+	{
+		free(d->name);
+		free(d);
+		return (NULL);
+	}
 	d->age = age;
 
 	return (d);
