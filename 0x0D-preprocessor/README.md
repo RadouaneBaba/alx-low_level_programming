@@ -1,0 +1,1 @@
+macro like object #
