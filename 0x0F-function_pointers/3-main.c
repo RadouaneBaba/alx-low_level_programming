@@ -14,19 +14,21 @@
 int main(int argc, char *argv[])
 {
 	int result;
+	char *op;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0) && atoi(argv[3]) == 0)
+	op = argv[2];
+	if ((strcmp(op, "/") == 0 || strcmp(op, "%") == 0) && atoi(argv[3]) == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	if (get_op_func(argv[2]) == NULL)
+	if (get_op_func(op) == NULL)
 	{
 		printf("Error\n");
 		exit(99);
