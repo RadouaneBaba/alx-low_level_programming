@@ -3,7 +3,7 @@
 
 /**
  * int_index - searches for an integer
- * 
+ *
  * @array: pointer to array
  * @size: size of the array
  * @cmp: pointer to the compare func
