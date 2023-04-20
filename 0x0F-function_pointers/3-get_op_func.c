@@ -1,16 +1,15 @@
-#include "calc.h"
+#include "3-calc.h"
+#include <stddef.h>
 
 /**
  * get_op_func - select the correct function
  * 
  * @s: the operation
- * @a: first num
- * @b: second num
  *
- * Return: integer
+ * Return: integer or NULL
  */
 
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},
@@ -24,8 +23,8 @@ int (*get_op_func(char *s))(int a, int b)
 
 	while (i < 6)
 	{
-		if (s == ops[i][0])
-			return (ops[i][1]);
+		if (strcmp(s, ops[i].op) == 0)
+			return (ops[i].f);
 		i++;
 	}
 	return (NULL);
