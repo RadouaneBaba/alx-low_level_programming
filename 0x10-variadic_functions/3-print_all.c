@@ -1,6 +1,6 @@
 #include "variadic_functions.h"
 #include <stdio.h>
-
+#include <stddef.h>
 /**
  * print_all - print anything
  * @format: string of arg types
@@ -14,7 +14,7 @@ void print_all(const char * const format, ...)
 	va_list args;
 
 	va_start(args, format);
-	while (format[i])
+	while (format[i] && format)
 	{
 		if (!format[i + 1])
 			c = "";
@@ -32,7 +32,10 @@ void print_all(const char * const format, ...)
 			case 's':
 				s = va_arg(args, char *);
 				if (!s)
+				{
 					printf("(nil)%s", c);
+					break;
+				}
 				printf("%s%s", s, c);
 				break;
 		}

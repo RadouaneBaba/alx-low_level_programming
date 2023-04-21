@@ -3,8 +3,8 @@
 
 /**
  * print_numbers - print nums
- * 
- * @seperator: string between nums
+ *
+ * @separator: string between nums
  * @n: num of args
  *
  */
