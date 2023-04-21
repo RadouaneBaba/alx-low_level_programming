@@ -8,40 +8,32 @@
 
 void print_all(const char * const format, ...)
 {
-	int size, i, j = 0;
+	int i = 0;
 	char *s;
-	char c;
+	char *c = ", ";
 	va_list args;
 
-	while (format[j])
+	va_start(args, format);
+	while (format[i])
 	{
-		c = format[j];
-		if (c == 'c' || c == 'i' || c == 'f' || c == 's')
-			size++;
-		j++;
-	}
-	va_start(args, size);
-	while (i < size)
-	{
+		if (!format[i + 1])
+			c = "";
 		switch (format[i])
 		{
 			case 'c':
-				printf("%c, ", va_arg(args, char));
+				printf("%c%s", va_arg(args, int), c);
 				break;
 			case 'i':
-				printf("%i, ", va_arg(args, int));
+				printf("%i%s", va_arg(args, int), c);
 				break;
 			case 'f':
-				printf("%f, ", va_arg(args, float));
+				printf("%f%s", va_arg(args, double), c);
 				break;
 			case 's':
 				s = va_arg(args, char *);
-				if (s)
-				{
-					printf("%s, ", va_arg(args, char *));
-					break;
-				}
-				printf("(nil), ");
+				if (!s)
+					printf("(nil)%s", c);
+				printf("%s%s", s, c);
 				break;
 		}
 		i++;
