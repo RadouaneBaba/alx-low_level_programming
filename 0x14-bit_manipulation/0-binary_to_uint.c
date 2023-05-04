@@ -10,7 +10,7 @@ unsigned int _strlen(const char *s)
 {
 	unsigned int i = 0;
 
-	while (s[i] != '\0')
+	while (s[i])
 		i++;
 	return (i);
 }
@@ -24,8 +24,6 @@ unsigned int _pow(unsigned int n, unsigned int p)
 {
 	unsigned int i = 1;
 
-	if (p == 0)
-		return (1);
 	while (p--)
 		i *= n;
 	return (i);
@@ -38,7 +36,7 @@ unsigned int _pow(unsigned int n, unsigned int p)
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int n, i = 0;
+	unsigned int n = 0, i = 0;
 
 	if (b == NULL)
 		return (0);
