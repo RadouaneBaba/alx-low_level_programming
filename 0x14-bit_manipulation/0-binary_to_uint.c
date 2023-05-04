@@ -31,7 +31,7 @@ unsigned int _pow(unsigned int n, unsigned int p)
 	return (i);
 }
 /**
- * binary_to_unit - convert binary to unsigned int
+ * binary_to_uint - convert binary to unsigned int
  * @b: string of binary
  * Return: decimal int
  */
