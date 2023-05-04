@@ -23,6 +23,7 @@ unsigned int _strlen(char *s)
 unsigned int _pow(unsigned int n, unsigned int p)
 {
 	unsigned int i = 1;
+
 	if (p == 0)
 		return (1);
 	while (p--)
