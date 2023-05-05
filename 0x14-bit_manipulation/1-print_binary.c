@@ -8,15 +8,14 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int i = 1;
+	unsigned int k = 0;
 
 	if (n == 0)
 		_putchar('0');
-	while (i <= n)
+	while ((i <= n) && (k < 63))
 	{
-		if (i << 1)
-			i <<= 1;
-		else
-			break;
+		i <<= 1;
+		k++;
 	}
 
 	while (i >>= 1)
