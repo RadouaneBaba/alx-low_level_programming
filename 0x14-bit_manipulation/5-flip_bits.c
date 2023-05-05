@@ -13,7 +13,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int j = 1;
 	unsigned int k = 0;
 
-	while (((j <= m) | (j <= n)) && (k < 63))
+	while (((j <= m) | (j <= n)) && (k < 64))
 	{
 		if ((j & m) != (j & n))
 			i++;
