@@ -8,7 +8,7 @@
  * Return: num of letters read and printed or 0
  */
 
-ssite_t read_textfile(const char *filename, size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd, a, b;
 	char *buf = malloc(letters);
