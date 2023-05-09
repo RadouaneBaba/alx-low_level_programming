@@ -1,18 +1,6 @@
 #include "main.h"
-/**
- * _strlen - length of str
- * @s: string
- * Return: length
- */
+#include <stdio.h>
 
-int _strlen(const char *s)
-{
-	int i = 0;
-
-	while (s[i])
-		i++;
-	return (i);
-}
 /**
  * read_textfile - reads test file and print it to stdout
  * @filename: file
@@ -24,9 +12,9 @@ int _strlen(const char *s)
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd, a, b;
-	char *buf = malloc(_strlen(filename));
+	char *buf = malloc(letters);
 
-	if (filename == NULL)
+	if ((buf == NULL) || (filename == NULL))
 		return (0);
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
@@ -35,7 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (a == -1)
 		return (0);
-	b = write(1, buf, letters);
+	b = write(1, buf, a);
 	if (b == -1)
 		return (0);
 	return (b);
