@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int fdf, fdt, k, e;
+	int fdf, fdt, k;
 	char *buffer[1024];
 
 	if (argc != 3)
@@ -47,4 +47,5 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdt);
 		exit(100);
 	}
+	return (0);
 }
