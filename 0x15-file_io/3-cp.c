@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int fdf, fdt, k;
-	char *buffer[1024];
+	char buffer[1024];
 
 	if (argc != 3)
 	{
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	}
 
 	fdf = open(argv[1], O_RDONLY);
-	fdt = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 664);
+	fdt = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
 	while ((k = read(fdf, buffer, 1024)) > 0)
 	{
