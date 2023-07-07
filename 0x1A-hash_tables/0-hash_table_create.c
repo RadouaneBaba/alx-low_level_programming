@@ -18,9 +18,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	if (ht->array == NULL)
 		return (NULL);
-	while (ht->array[i])
+	while (i < size)
 	{
 		ht->array[i] = NULL;
+		i++;
 	}
 	return (ht);
 }
