@@ -11,10 +11,6 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	hash_node_t *elem = ht->array[key_index((unsigned char *) key, ht->size)];
 
-	if (elem == NULL)
-		return (NULL);
-	if (strcmp(elem->key, key) == 0)
-		return (elem->value);
 	while (elem != NULL)
 	{
 		if (strcmp(elem->key, key) == 0)
