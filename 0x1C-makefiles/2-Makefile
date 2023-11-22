@@ -1,9 +1,7 @@
-# Variables
 CC=gcc
 SRC=$(wildcard *.c)
 OBJ=$(SRC:.c=.o)
 NAME=school
 
-# Rules
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
