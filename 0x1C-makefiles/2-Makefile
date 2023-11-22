@@ -13,3 +13,6 @@ $(NAME): $(OBJ)
 	$(CC) -c -o $@ $<
 
 .PHONY: all
+
+clean:
+	rm -f $(OBJ) $(NAME)
